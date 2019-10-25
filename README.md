@@ -1,6 +1,4 @@
 
-**
-
 # Cave Mapping Points Converter
 
 Measuring points converter for the classic (paper) cave mapping    method.
