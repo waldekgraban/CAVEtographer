@@ -1,7 +1,7 @@
 <?php
 /*
  *
- * Copyright (c) 2019 Waldemar Graban
+ * Created by Waldemar Graban 2019
  *
  */
 
