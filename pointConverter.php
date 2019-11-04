@@ -1,7 +1,7 @@
 <?php
 /*
  *
- * Created by Waldemar Graban 2019
+ * Created by Waldemar Graban & Krzysztof Grabania 2019
  *
  */
 
