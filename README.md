@@ -1,4 +1,5 @@
 
+
 # Cave Mapping Points Converter
 
 Measuring points converter for the classic (paper) cave mapping    method.
@@ -6,6 +7,9 @@ Measuring points converter for the classic (paper) cave mapping    method.
 **What is going on?**
 
 In speleology, we have several methods for measuring geological objects, including: paperless - digital and classic.
+
+![enter image description here](https://raw.githubusercontent.com/waldekgraban/cave-mapping-points-converter/master/mapping.jpg)
+
 This script is my suggestion for solving the problem of mapping measurement points on the plane and calculating the length of projected segments.
 
 The length of the segment measured under any draft will be different after throwing it onto a flat sheet. You need to know the right formula to get the right proportion and perspective. In this case it will be:
