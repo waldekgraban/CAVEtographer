@@ -1,5 +1,6 @@
 
 
+
 # Cave Mapping Points Converter
 
 Measuring points converter for the classic (paper) cave mapping    method.
@@ -8,10 +9,11 @@ Measuring points converter for the classic (paper) cave mapping    method.
 
 In speleology, we have several methods for measuring geological objects, including: paperless - digital and classic.
 
-![enter image description here](https://raw.githubusercontent.com/waldekgraban/cave-mapping-points-converter/master/mapping.jpg)
+![paper cave map](https://raw.githubusercontent.com/waldekgraban/cave-mapping-points-converter/master/mapping.jpg)
+
 This allows for analogue drawing of cave maps and more accurate digital mapping of the measured object:
 
-![enter image description here](https://raw.githubusercontent.com/waldekgraban/cave-mapping-points-converter/master/jaskinia_na_dupce.png)
+![digital cave map](https://raw.githubusercontent.com/waldekgraban/cave-mapping-points-converter/master/jaskinia_na_dupce.png)
 
 This script is my suggestion for solving the problem of mapping measurement points on the plane and calculating the length of projected segments.
 
