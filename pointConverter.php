@@ -62,7 +62,7 @@ class PointsCollection implements IteratorAggregate
         $output = fopen('php://memory', 'r+');
 
         fputcsv($output, [
-            'Od', 'Do', 'Dlugosc', 'Azymut', 'Upad', 'Zrzutowana dlugosc', 'Zrzutowana wysokosc', 'WE', 'NS', 'Roznica wysokosci', 'Os X', 'Os Y',
+            'From', 'To', 'Length', 'Azimuth', 'Inclination', 'Dumped Length', 'Dumped Height', 'WE', 'NS', 'Height Difference', 'X-axis', 'Y-axis'
         ]);
 
         foreach ($this->points as $key => $point) {
