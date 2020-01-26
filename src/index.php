@@ -20,3 +20,5 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 echo $points->toCsv();
+
+echo $points->showResult();
