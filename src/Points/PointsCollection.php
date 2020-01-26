@@ -88,4 +88,21 @@ class PointsCollection implements \IteratorAggregate
 
         return stream_get_contents($output);
     }
+
+    public function showResult()
+    {
+        foreach ($this->points as $key => $point) {
+            echo "length = " . $point->length() . "<br>";
+            echo "azimuth = " . $point->azimuth() . "<br>";
+            echo "inclination = " . $point->inclination() . "<br>";
+            echo "projectedLength = " . $point->projectedLength() . "<br>";
+            echo "projectedHeight = " . $point->projectedHeight() . "<br>";
+            echo "latitudeDiff = " . $point->latitudeDiff() . "<br>";
+            echo "longitudeDiff = " . $point->longitudeDiff() . "<br>";
+            echo "relativeHeightDiff = " . $this->relativeHeightDiff($point) . "<br>";
+            echo "X-axis = " . $this->latitudeDeviation($point) . "<br>";
+            echo "Y-axis = " . $this->longitudeDeviation($point) . "<br>";
+            echo "<br><br>";
+        }
+    }
 }
