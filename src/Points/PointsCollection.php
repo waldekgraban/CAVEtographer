@@ -5,7 +5,9 @@
  *
  */
 
-class PointsCollection implements IteratorAggregate
+namespace Waldekgraban\Converter\Points;
+
+class PointsCollection implements \IteratorAggregate
 {
     protected $points;
 
@@ -62,7 +64,7 @@ class PointsCollection implements IteratorAggregate
         $output = fopen('php://memory', 'r+');
 
         fputcsv($output, [
-            'From', 'To', 'Length', 'Azimuth', 'Inclination', 'Dumped Length', 'Dumped Height', 'WE', 'NS', 'Height Difference', 'X-axis', 'Y-axis'
+            'From', 'To', 'Length', 'Azimuth', 'Inclination', 'Dumped Length', 'Dumped Height', 'WE', 'NS', 'Height Difference', 'X-axis', 'Y-axis',
         ]);
 
         foreach ($this->points as $key => $point) {
@@ -87,73 +89,3 @@ class PointsCollection implements IteratorAggregate
         return stream_get_contents($output);
     }
 }
-
-class Point
-{
-    protected $length;
-
-    protected $azimuth;
-
-    protected $inclination;
-
-    public function __construct($length, $azimuth, $inclination)
-    {
-        $this->length   = $length;
-        $this->azimuth  = $azimuth;
-        $this->inclination = $inclination;
-    }
-
-    public function length()
-    {
-        return $this->length;
-    }
-
-    public function azimuth()
-    {
-        return $this->azimuth;
-    }
-
-    public function inclination()
-    {
-        return $this->inclination;
-    }
-
-    public function projectedLength()
-    {
-        return round($this->length() * cos(deg2rad($this->inclination())), 2);
-    }
-
-    public function projectedHeight()
-    {
-        return round($this->length() * sin(deg2rad($this->inclination())), 2);
-    }
-
-    public function latitudeDiff()
-    {
-        return round($this->projectedLength() * sin(deg2rad($this->azimuth())), 2);
-    }
-
-    public function longitudeDiff()
-    {
-        return round($this->projectedLength() * cos(deg2rad($this->azimuth())), 2);
-    }
-
-    public function heightDiff(Point $point)
-    {
-        return $point->projectedHeight() + $this->projectedHeight();
-    }
-}
-
-$points = new PointsCollection([
-    0 => new Point(6.5, 293, -36),
-    1 => new Point(5.4, 234, -41),
-    2 => new Point(2.5, 237, -38),
-    3 => new Point(7.9, 246, -33),
-]);
-
-header("Content-type: text/csv");
-header("Content-Disposition: attachment; filename=pomiary.csv");
-header("Pragma: no-cache");
-header("Expires: 0");
-
-echo $points->toCsv();
