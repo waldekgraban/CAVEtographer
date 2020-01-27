@@ -6,9 +6,16 @@
         "name": "Waldemar Graban",
         "email": "waldekgraban@gmail.com"
     }],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/PHP-Survex/PHP-Survex.git"
+        }
+    ],
     "require": {
         "php": "^7.2",
-        "components/jquery": "^3.4"
+        "components/jquery": "^3.4",
+        "php-survex/php-survex": "dev-dev"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12.2",
