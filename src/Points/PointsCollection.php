@@ -105,4 +105,17 @@ class PointsCollection implements \IteratorAggregate
             echo "<br><br>";
         }
     }
+
+    public function getCoordinateSystemData()
+    {
+        foreach ($this->points as $key => $point) {
+            $coordinates[] = [
+                // 'length' => $point->projectedLength(),
+                'x'      => $this->latitudeDeviation($point),
+                'y'      => $this->longitudeDeviation($point),
+            ];
+        }
+
+        return $coordinates;
+    }
 }

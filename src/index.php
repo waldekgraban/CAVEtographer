@@ -7,13 +7,7 @@ require_once "../vendor/autoload.php";
 use PHPSurvex\PHPSurvex\Parser\Parser;
 use Waldekgraban\Converter\Points\Point;
 use Waldekgraban\Converter\Points\PointsCollection;
-
-// $points = new PointsCollection([
-//     0 => new Point(6.5, 293, -36),
-//     1 => new Point(5.4, 234, -41),
-//     2 => new Point(2.5, 237, -38),
-//     3 => new Point(7.9, 246, -33),
-// ]);
+use Waldekgraban\Converter\Svg\Svg;
 
 // header("Content-type: text/csv");
 // header("Content-Disposition: attachment; filename=pomiary.csv");
@@ -22,9 +16,7 @@ use Waldekgraban\Converter\Points\PointsCollection;
 
 // echo $points->toCsv();
 
-// echo $points->showResult();
-
-$filename = __DIR__ . '/Examples/black_hawk_down.svx';
+$filename = __DIR__ . '/Examples/dupce.svx';
 $content  = file_get_contents($filename);
 $parser   = Parser::make($content);
 
@@ -42,4 +34,17 @@ foreach ($data->getMeasurements() as $measurement) {
 }
 $points = new PointsCollection($points);
 
-$points->showResult();
+// $points->showResult();
+
+// dump($points->getCoordinateSystemData());
+
+$coordinates = $points->getCoordinateSystemData();
+$style = ['stroke-width: 2;', 'stroke: black;', 'fill: none;'];
+$caveMap = new Svg($coordinates, $style);
+$caveMap->show();
+// echo $caveMap->create();
+
+
+
+
+
