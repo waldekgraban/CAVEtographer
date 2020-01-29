@@ -36,8 +36,6 @@ $points = new PointsCollection($points);
 
 // $points->showResult();
 
-// dump($points->getCoordinateSystemData());
-
 $coordinates = $points->getCoordinateSystemData();
 $style = ['stroke-width: 2;', 'stroke: black;', 'fill: none;'];
 $caveMap = new Svg($coordinates, $style);
