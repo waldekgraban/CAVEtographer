@@ -36,7 +36,7 @@ class Svg
 
     public function create()
     {
-        return '<path d="M100,100' . $this->generateMeasuringLine() . '" style=" ' . $this->getStyle() . ' " />';
+        //return '<path d="M100,100' . $this->generateMeasuringLine() . '" style=" ' . $this->getStyle() . ' " />';
     }
 
     public function show()
