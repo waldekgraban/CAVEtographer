@@ -37,10 +37,14 @@ $points = new PointsCollection($points);
 // $points->showResult();
 
 $coordinates = $points->getCoordinateSystemData();
+// dump($coordinates);
 $style = ['stroke-width: 2;', 'stroke: black;', 'fill: none;'];
 $caveMap = new Svg($coordinates, $style);
 $caveMap->show();
+// dump($caveMap->getCoordinates());
+// $caveMap->generateMeasuringLine();
 // echo $caveMap->create();
+
 
 
 

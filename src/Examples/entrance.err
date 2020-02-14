@@ -1,0 +1,80 @@
+surface.j13 - surface.mfc05
+Pierwodna długość   2.48m (  1 odcinków), przesunięto o   0.04m ( 0.04m/odcinek). Błąd   1.45%
+0.467759
+H: 0.500584 V: 0.325133
+
+ent.mfc102 - ent.mfc100 - ent.mfc101
+Pierwodna długość   5.24m (  2 odcinków), przesunięto o   0.16m ( 0.08m/odcinek). Błąd   2.98%
+1.403488
+H: 1.549096 V: 0.794457
+
+con.102 - con.207 - con.203 - con.101 = ent.mfc101
+Pierwodna długość   8.98m (  3 odcinków), przesunięto o   0.26m ( 0.09m/odcinek). Błąd   2.86%
+1.852007
+H: 2.295313 V: 0.030158
+
+ent.mfc112 - ent.mfc113 - ent.mfc114
+Pierwodna długość  12.40m (  2 odcinków), przesunięto o   0.10m ( 0.05m/odcinek). Błąd   0.81%
+0.685426
+H: 0.594307 V: 0.827069
+
+ent.mfc112 - ent.mfc109 - ent.mfc108 - ent.mfc107 - ent.mfc106 - ent.mfc105 - ent.mfc104 - ent.mfc103 - ent.mfc102
+Pierwodna długość  46.00m (  8 odcinków), przesunięto o   0.40m ( 0.05m/odcinek). Błąd   0.86%
+1.353263
+H: 1.124530 V: 1.695066
+
+con.112 - con.m220 - con.m221 - con.m222 - con.112
+Pierwodna długość  24.33m (  4 odcinków), przesunięto o   0.35m ( 0.09m/odcinek). Błąd   1.46%
+1.729987
+H: 1.665239 V: 1.844020
+
+ent.mfc116 - ent.mfc117 - ent.j13
+Pierwodna długość  17.12m (  2 odcinków), przesunięto o   0.10m ( 0.05m/odcinek). Błąd   0.56%
+0.569203
+H: 0.507319 V: 0.659179
+
+ent.mfc114 - ent.mfc115 - ent.mfc116
+Pierwodna długość  35.66m (  2 odcinków), przesunięto o   0.42m ( 0.21m/odcinek). Błąd   1.18%
+1.374571
+H: 1.358991 V: 1.401581
+
+jug.mfc114 - jug.mfc120 - jug.mfc121 - jug.mfc122 - jug.mfc123 - jug.mfc124 - jug.mfc126 - jug.mfc127 - jug.mfc128 - jug.s001 = sq.s001 - sq.15 - sq.14 - sq.13 - sq.12 - sq.11 - sq.10 - sq.09 - sq.08 - sq.07 - sq.06 - sq.05 - sq.04 - sq.03 - sq.02 - sq.01 = ent.mfc101
+Pierwodna długość  80.10m ( 24 odcinków), przesunięto o   0.86m ( 0.04m/odcinek). Błąd   1.07%
+2.034024
+H: 1.943297 V: 2.224091
+
+ent2.m114 - ent2.m327 - ent2.m326 - ent2.m322 - ent2.m116
+Pierwodna długość  47.42m (  4 odcinków), przesunięto o   0.55m ( 0.14m/odcinek). Błąd   1.15%
+1.218646
+H: 0.794909 V: 1.678972
+
+ent2.m114 - ent2.m301 - ent2.m302 - ent2.m303 - ent2.m114
+Pierwodna długość  34.23m (  4 odcinków), przesunięto o   0.45m ( 0.11m/odcinek). Błąd   1.31%
+1.794643
+H: 2.294084 V: 0.254353
+
+surface.mfc07 - surface.j15 = ent2.j15 - ent2.m320 - ent2.m321 - ent2.m116
+Pierwodna długość  28.49m (  4 odcinków), przesunięto o   0.34m ( 0.09m/odcinek). Błąd   1.20%
+1.429913
+H: 1.474755 V: 1.333575
+
+surface.mfc07 - surface.mfc06 - surface.mfc05
+Pierwodna długość  14.36m (  2 odcinków), przesunięto o   0.24m ( 0.12m/odcinek). Błąd   1.69%
+1.395101
+H: 1.241749 V: 1.618105
+
+surface.mfc02 - surface.mfc16 - surface.j14 = ent2.j14 - ent2.m310 - ent2.m311 - ent2.m312 - ent2.m313 - ent2.m116
+Pierwodna długość  34.37m (  7 odcinków), przesunięto o   0.24m ( 0.03m/odcinek). Błąd   0.70%
+0.922200
+H: 1.002795 V: 0.734710
+
+surface.mfc02 - surface.mfc03 - surface.mfc04 - surface.mfc05
+Pierwodna długość  38.66m (  3 odcinków), przesunięto o   0.35m ( 0.12m/odcinek). Błąd   0.90%
+1.041877
+H: 1.323177 V: 0.518664
+
+surface.mfc02 - surface.mfc15 - surface.mfc14 - surface.mfc13 - surface.mfc12 - surface.mfc11 - surface.mfc10 - surface.mfc09 - surface.mfc08 - surface.mfc07
+Pierwodna długość 149.75m (  9 odcinków), przesunięto o   0.94m ( 0.10m/odcinek). Błąd   0.63%
+1.446330
+H: 1.067316 V: 1.843623
+

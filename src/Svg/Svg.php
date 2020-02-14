@@ -28,7 +28,7 @@ class Svg
         $line = '';
 
         foreach ($this->coordinates as $key => $axis) {
-            $line .= ' l' . $axis['x'] . ',' . $axis['y'];
+             echo $line .=  $axis['x'] . ',' . $axis['y'] . '<br>';
         }
 
         return $line;
@@ -39,27 +39,91 @@ class Svg
         //return '<path d="M100,100' . $this->generateMeasuringLine() . '" style=" ' . $this->getStyle() . ' " />';
     }
 
+    public function showTest()
+    {
+        echo ' <?xml version="1.0" encoding="UTF-8"?>';
+        echo ' <svg version="1.1" baseProfile="full"';
+        echo ' xmlns="http://www.w3.org/2000/svg"';
+        echo ' xmlns:xlink="http://www.w3.org/1999/xlink"';
+        echo ' xmlns:ev="http://www.w3.org/2001/xml-events"';
+        echo ' width="255.786mm" height="335.327mm"';
+        echo ' viewBox="0 0 255.786 335.327">';
+        echo ' <title>black_hawk_down</title>';
+        echo ' <g transform="translate(5.000 330.327)">';
+            echo ' <g id="Legs" stroke="black" fill="none" stroke-width="0.4px">';
+                echo ' <path d="M56.491 -259.921L66.228 -265.339"/>';
+                echo ' <path d="M66.228 -265.339L78.708 -256.293"/>';
+                echo ' <path d="M78.708 -256.293L81.659 -226.084"/>';
+                echo ' <path d="M81.659 -226.084L57.427 -244.244"/>';
+                echo ' <path d="M81.659 -226.084L100.856 -209.134"/>';
+                echo ' <path d="M100.856 -209.134L128.107 -231.555"/>';
+                echo ' <path d="M100.856 -209.134L113.971 -189.978"/>';
+                echo ' <path d="M113.971 -189.978L118.026 -180.709"/>';
+                echo ' <path d="M118.026 -180.709L105.553 -163.164"/>';
+                echo ' <path d="M118.026 -180.709L148.452 -161.964"/>';
+                echo ' <path d="M148.452 -161.964L150.984 -133.588"/>';
+                echo ' <path d="M150.984 -133.588L157.933 -102.516"/>';
+            echo ' </g>';
+        echo ' </g>';
+        echo ' </svg>';
+
+
+    }
+
     public function show()
     {
-        // echo '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">';
-        // // echo $this->create();
-        // echo '<path d="M66.072 -53.080 L61.370 -55.448L57.930 -53.263L56.210 -52.302L50.000 -50.000"/>';
-        // // echo '<path d="M20,20 l26.83,235.52 l43.45,411.34 l51.6,597.92 l79.96,802.27 " style="stroke-width: 2; stroke: black; fill: none; " />';
-        // echo '</svg>';
+        // $xy[] = ['x' => 1, 'y' => 2];
+        // $xy[] = ['x' => 7, 'y' => 12];
+        // $xy[] = ['x' => 2, 'y' => 8];
+        // $xy[] = ['x' => 8, 'y' => 1];
 
-//         echo '<svg version="1.1" baseProfile="full"';
-//         echo 'xmlns="http://www.w3.org/2000/svg"';
-//         echo 'xmlns:xlink="http://www.w3.org/1999/xlink"';
-//         echo 'xmlns:ev="http://www.w3.org/2001/xml-events"';
-//         echo 'width="126.072mm" height="115.448mm"';
-//         echo 'viewBox="0 0 126.072 115.448">';
-//         echo '<title>dupce</title>';
-//         echo '<g transform="translate(5.000 110.448)">';
-//         echo '<g id="Legs" stroke="black" fill="none" stroke-width="0.4px">';
-//         echo '<path d="M66.072 -53.080 l26.83,235.52 l43.45,411.34 l51.6,597.92 l79.96,802.27 " />';
-//         echo '</g>';
-//         echo '</g>';
-//         echo '</svg>';
+        // die(dump($xy));
+
+
+        echo ' <?xml version="1.0" encoding="UTF-8"?>';
+        echo ' <svg version="1.1" baseProfile="full"';
+        echo ' xmlns="http://www.w3.org/2000/svg"';
+        echo ' xmlns:xlink="http://www.w3.org/1999/xlink"';
+        echo ' xmlns:ev="http://www.w3.org/2001/xml-events"';
+        echo ' width="255.786mm" height="335.327mm"';
+        echo ' viewBox="0 0 1255.786 1335.327">';
+        echo ' <title>black_hawk_down</title>';
+
+            echo ' <g id="Legs" stroke="black" fill="none" stroke-width="3px">';
+                while ($current = current($this->coordinates)) {
+                    if ($next = next($this->coordinates)) {
+                        echo "<path d=\"M{$current['x']} {$current['y']} L{$next['x']} {$next['y']}\"/>\n";
+                    }
+                }
+            echo ' </g>';
+
+        echo ' </svg>';
+
+        echo ' <?xml version="1.0" encoding="UTF-8"?>';
+        echo ' <svg version="1.1" baseProfile="full"';
+        echo ' xmlns="http://www.w3.org/2000/svg"';
+        echo ' xmlns:xlink="http://www.w3.org/1999/xlink"';
+        echo ' xmlns:ev="http://www.w3.org/2001/xml-events"';
+        echo ' width="255.786mm" height="335.327mm"';
+        echo ' viewBox="0 0 255.786 335.327">';
+        echo ' <title>black_hawk_down</title>';
+        echo ' <g transform="translate(5.000 330.327)">';
+            echo ' <g id="Legs" stroke="black" fill="none" stroke-width="0.4px">';
+                echo ' <path d="M56.491 -259.921L66.228 -265.339"/>';
+                echo ' <path d="M66.228 -265.339L78.708 -256.293"/>';
+                echo ' <path d="M78.708 -256.293L81.659 -226.084"/>';
+                echo ' <path d="M81.659 -226.084L57.427 -244.244"/>';
+                echo ' <path d="M81.659 -226.084L100.856 -209.134"/>';
+                echo ' <path d="M100.856 -209.134L128.107 -231.555"/>';
+                echo ' <path d="M100.856 -209.134L113.971 -189.978"/>';
+                echo ' <path d="M113.971 -189.978L118.026 -180.709"/>';
+                echo ' <path d="M118.026 -180.709L105.553 -163.164"/>';
+                echo ' <path d="M118.026 -180.709L148.452 -161.964"/>';
+                echo ' <path d="M148.452 -161.964L150.984 -133.588"/>';
+                echo ' <path d="M150.984 -133.588L157.933 -102.516"/>';
+            echo ' </g>';
+        echo ' </g>';
+        echo ' </svg>';
     }
 }
 // <path d="M0,0  l15.94,80.31 l55.11,219.13 l154.12,387.6 l220.22,525.44 l285.92,670.54 l317.21,845.58 l400.85,961.84 l494.4,1132.13 l593.96,1290.37" style="stroke-width: 2; stroke: black; fill: none;"></path>
