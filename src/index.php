@@ -13,10 +13,9 @@ use Waldekgraban\Converter\Svg\Svg;
 // header("Content-Disposition: attachment; filename=pomiary.csv");
 // header("Pragma: no-cache");
 // header("Expires: 0");
-
 // echo $points->toCsv();
 
-$filename = __DIR__ . '/Examples/dupce.svx';
+$filename = __DIR__ . '/Examples/black_hawk_down.svx';
 $content  = file_get_contents($filename);
 $parser   = Parser::make($content);
 
@@ -34,16 +33,11 @@ foreach ($data->getMeasurements() as $measurement) {
 }
 $points = new PointsCollection($points);
 
-// $points->showResult();
-
 $coordinates = $points->getCoordinateSystemData();
-// dump($coordinates);
 $style = ['stroke-width: 2;', 'stroke: black;', 'fill: none;'];
 $caveMap = new Svg($coordinates, $style);
 $caveMap->show();
-// dump($caveMap->getCoordinates());
-// $caveMap->generateMeasuringLine();
-// echo $caveMap->create();
+
 
 
 

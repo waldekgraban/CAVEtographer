@@ -77,7 +77,7 @@ class Svg
         // $xy[] = ['x' => 2, 'y' => 8];
         // $xy[] = ['x' => 8, 'y' => 1];
 
-        // die(dump($xy));
+        // die(dump($this->coordinates));
 
 
         echo ' <?xml version="1.0" encoding="UTF-8"?>';
