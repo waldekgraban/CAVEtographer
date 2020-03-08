@@ -28,7 +28,7 @@ foreach ($data->getMeasurements() as $measurement) {
     $points[$measurement->getValue('from')] = new Point(
         $measurement->getValue('compass'),
         $measurement->getValue('tape'),
-        $measurement->getValue('clino'),
+        $measurement->getValue('clino')
     );
 }
 $points = new PointsCollection($points);
