@@ -31,13 +31,10 @@ foreach ($data->getMeasurements() as $measurement) {
         $measurement->getValue('clino')
     );
 }
+
 $points = new PointsCollection($points);
 
 $coordinates = $points->getCoordinateSystemData();
-$style = ['stroke-width: 2;', 'stroke: black;', 'fill: none;'];
-$caveMap = new Svg($coordinates, $style);
+$style       = ['stroke-width: 2;', 'stroke: black;', 'fill: none;'];
+$caveMap     = new Svg($coordinates, $style);
 $caveMap->show();
-
-
-
-
