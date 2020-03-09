@@ -32,7 +32,7 @@ class PointsCollection implements \IteratorAggregate
     public function latitudeDeviation(Point $lastPoint)
     {
         return $this->calculateTotal($lastPoint, function ($point) {
-            return $point->longitudeDiff();
+            return $point->latitudeDiff();
         });
     }
 
@@ -40,7 +40,7 @@ class PointsCollection implements \IteratorAggregate
     public function longitudeDeviation(Point $lastPoint)
     {
         return $this->calculateTotal($lastPoint, function ($point) {
-            return $point->latitudeDiff();
+            return $point->longitudeDiff();
         });
     }
 
