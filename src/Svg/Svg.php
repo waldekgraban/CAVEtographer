@@ -70,13 +70,6 @@ class Svg
 
     public function show()
     {
-        // $xy[] = ['x' => 1, 'y' => 2];
-        // $xy[] = ['x' => 7, 'y' => 12];
-        // $xy[] = ['x' => 2, 'y' => 8];
-        // $xy[] = ['x' => 8, 'y' => 1];
-
-        // die(dump($this->coordinates));
-
         echo ' <?xml version="1.0" encoding="UTF-8"?>';
         echo ' <svg version="1.1" baseProfile="full"';
         echo ' xmlns="http://www.w3.org/2000/svg"';

@@ -34,8 +34,9 @@ foreach ($data->getMeasurements() as $measurement) {
 
 $points = new PointsCollection($points);
 
-// $coordinates = $points->getCoordinateSystemData();
-// $style       = ['stroke-width: 2;', 'stroke: black;', 'fill: none;'];
-// $caveMap     = new Svg($coordinates, $style);
-// $caveMap->show();
-// // dd($caveMap->generateMeasuringLine());
+$coordinates = $points->getCoordinateSystemData();
+// dd($coordinates);
+$style       = ['stroke-width: 2;', 'stroke: black;', 'fill: none;'];
+$caveMap     = new Svg($coordinates, $style);
+$caveMap->show();
+// dd($caveMap->generateMeasuringLine());
