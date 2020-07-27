@@ -39,22 +39,26 @@ class Point
 
     public function projectedLength()
     {
-        return round($this->length() * cos(deg2rad($this->inclination())), 2);
+        // return round($this->length() * cos(deg2rad($this->inclination())), 2);
+        return $this->length() * cos(deg2rad($this->inclination()));
     }
 
     public function projectedHeight()
     {
-        return round($this->length() * sin(deg2rad($this->inclination())), 2);
+        // return round($this->length() * sin(deg2rad($this->inclination())), 2);
+        return $this->length() * sin(deg2rad($this->inclination()));
     }
 
     public function latitudeDiff()
     {
-        return round($this->projectedLength() * sin(deg2rad($this->azimuth())), 2);
+        // return round($this->projectedLength() * sin(deg2rad($this->azimuth())), 2);
+        return $this->projectedLength() * sin(deg2rad($this->azimuth()));
     }
 
     public function longitudeDiff()
     {
-        return round($this->projectedLength() * cos(deg2rad($this->azimuth())), 2);
+        // return round($this->projectedLength() * cos(deg2rad($this->azimuth())), 2);
+        return $this->projectedLength() * cos(deg2rad($this->azimuth()));
     }
 
     public function heightDiff(Point $point)

@@ -70,8 +70,8 @@ class Svg
 
     public function show()
     {
-        echo ' <?xml version="1.0" encoding="UTF-8"?>';
-        echo ' <svg version="1.1" baseProfile="full"';
+        echo ' <?xml version="1.0" encoding="UTF-8" ?> ';
+        echo ' <svg version="1.1" baseProfile="full" style="transform: rotate(38deg);top: 85px;position: relative;width: 634px;left: 100px;"';
         echo ' xmlns="http://www.w3.org/2000/svg"';
         echo ' xmlns:xlink="http://www.w3.org/1999/xlink"';
         echo ' xmlns:ev="http://www.w3.org/2001/xml-events"';
