@@ -1,10 +1,10 @@
 <?php
 
-namespace Waldekgraban\Converter\Tests;
+namespace Tests;
 
-use PHPUnit\Framework\TestCase as BaseTestCase;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
-class TestCase extends BaseTestCase
+abstract class TestCase extends BaseTestCase
 {
-    //
+    use CreatesApplication;
 }

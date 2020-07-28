@@ -1,62 +1,79 @@
+<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
 
+## About Laravel
 
-# Cave Mapping Points Converter
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-Measuring points converter for the classic (paper) cave mapping    method.
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-**What is going on?**
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-In speleology, we have several methods for measuring geological objects, including: paperless - digital and classic.
+## Learning Laravel
 
-![paper cave map](https://raw.githubusercontent.com/waldekgraban/cave-mapping-points-converter/master/img/mapping.jpg)
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-This allows for analogue drawing of cave maps and more accurate digital mapping of the measured object:
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-![digital cave map](https://raw.githubusercontent.com/waldekgraban/cave-mapping-points-converter/master/img/jaskinia_na_dupce.png)
+## Laravel Sponsors
 
-This script is my suggestion for solving the problem of mapping measurement points on the plane and calculating the length of projected segments.
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-The length of the segment measured under any draft will be different after throwing it onto a flat sheet. You need to know the right formula to get the right proportion and perspective. In this case it will be:
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- [UserInsights](https://userinsights.com)
+- [Fragrantica](https://www.fragrantica.com)
+- [SOFTonSOFA](https://softonsofa.com/)
+- [User10](https://user10.com)
+- [Soumettre.fr](https://soumettre.fr/)
+- [CodeBrisk](https://codebrisk.com)
+- [1Forge](https://1forge.com)
+- [TECPRESSO](https://tecpresso.co.jp/)
+- [Runtime Converter](http://runtimeconverter.com/)
+- [WebL'Agence](https://weblagence.com/)
+- [Invoice Ninja](https://www.invoiceninja.com)
+- [iMi digital](https://www.imi-digital.de/)
+- [Earthlink](https://www.earthlink.ro/)
+- [Steadfast Collective](https://steadfastcollective.com/)
+- [We Are The Robots Inc.](https://watr.mx/)
+- [Understand.io](https://www.understand.io/)
+- [Abdel Elrafa](https://abdelelrafa.com)
+- [Hyper Host](https://hyper.host)
+- [Appoly](https://www.appoly.co.uk)
+- [OP.GG](https://op.gg)
+- [云软科技](http://www.yunruan.ltd/)
 
-    length * cos(deg2rad(inclination))
+## Contributing
 
-And this is only one parameter... so you can use this converter.
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
+## Code of Conduct
 
-**How it's working?**
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-Based on the given data, the program performs calculations and returns the results in the form of the described **csv** file.
+## Security Vulnerabilities
 
-**How to use?**
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-Basic measurement data looks something like this:
+## License
 
-    *data normal from to tape compass clino
-
-	
-	(Point_A | Point_B | length | compass |	inclination)
-	   0	     1	     6.5	293	   -36
-	   1	     2	     5.4	234	   -41
-	   2	     3	     2.5	237	   -38
-	   3	     4	     7.9	246	   -33
-
-	*end
-All you have to do is enter a table of points:
-
-    $points = new PointsCollection([
-        0 => new Point(6.5, 293, -36),
-        1 => new Point(5.4, 234, -41),
-        2 => new Point(2.5, 237, -38),
-        3 => new Point(7.9, 246, -33),
-    ]);
-That's all - the results will be downloaded as csv.
-
- 
-**Nearest TODO in the future:**
-
- - The ability to add points in random order.
- - Import .svx files.
-
-This will continue to be developed.
-
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
