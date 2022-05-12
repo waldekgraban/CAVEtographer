@@ -24,7 +24,6 @@ $surveys = $parser->parse();
 
 $survey = $surveys->first();
 $data   = $survey->getData()->first();
-// dd($data->getMeasurements());
 
 foreach ($data->getMeasurements() as $measurement) {
     $points[$measurement->getValue('from')] = new Point(
@@ -37,8 +36,6 @@ foreach ($data->getMeasurements() as $measurement) {
 $points = new PointsCollection($points);
 
 $coordinates = $points->getCoordinateSystemData();
-dd($coordinates);
 $style       = ['stroke-width: 2;', 'stroke: black;', 'fill: none;'];
 $caveMap     = new Svg($coordinates, $style);
 $caveMap->show();
-// dd($caveMap->generateMeasuringLine());
